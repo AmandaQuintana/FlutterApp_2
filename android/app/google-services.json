@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "305167993236",
+    "firebase_url": "https://flutterapp-3b2dd-default-rtdb.firebaseio.com",
     "project_id": "flutterapp-3b2dd",
     "storage_bucket": "flutterapp-3b2dd.appspot.com"
   },
@@ -29,6 +30,13 @@
             {
               "client_id": "305167993236-tpr7d8es9je0v0j3rf16spd2jkjqejle.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "305167993236-534esd9d0u2vpm5ethuqto2lc0jndai6.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.flutterApplication2"
+              }
             }
           ]
         }

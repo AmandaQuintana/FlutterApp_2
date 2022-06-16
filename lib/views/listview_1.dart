@@ -92,6 +92,12 @@ class ListView1 extends StatelessWidget {
             }));
   }
 
+  static final FirebaseDatabase _database = FirebaseDatabase.instance;
+
+  DatabaseReference instanceFirebase() {
+    return _database.ref('/Registros');
+  }
+
   void callDatabase() async {
     /*DatabaseReference starCountRef =
         FirebaseDatabase.instance.ref('/Registros');
@@ -100,6 +106,8 @@ class ListView1 extends StatelessWidget {
       print(data.toString());
     });*/
 
-    final response = await firebase.getRegisters();
+    DatabaseReference _registros = instanceFirebase();
+    DataSnapshot response = await _registros.get();
+    print(response.value);
   }
 }

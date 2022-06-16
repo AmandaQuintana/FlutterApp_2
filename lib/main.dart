@@ -3,9 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_2/views/getfirebase.dart';
 import 'package:flutter_application_2/views/listview_1.dart';
 
+import 'firebase_options.dart';
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+  //await Firebase.initializeApp();
   //callDatabase();
   runApp(const MyApp());
 }

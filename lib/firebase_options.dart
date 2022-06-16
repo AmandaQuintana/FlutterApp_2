@@ -49,6 +49,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '305167993236',
     projectId: 'flutterapp-3b2dd',
     authDomain: 'flutterapp-3b2dd.firebaseapp.com',
+    databaseURL: 'https://flutterapp-3b2dd-default-rtdb.firebaseio.com',
     storageBucket: 'flutterapp-3b2dd.appspot.com',
     measurementId: 'G-RH87WV1GKC',
   );
@@ -58,6 +59,7 @@ class DefaultFirebaseOptions {
     appId: '1:305167993236:android:6182d69a115cbe31ade781',
     messagingSenderId: '305167993236',
     projectId: 'flutterapp-3b2dd',
+    databaseURL: 'https://flutterapp-3b2dd-default-rtdb.firebaseio.com',
     storageBucket: 'flutterapp-3b2dd.appspot.com',
   );
 
@@ -66,6 +68,7 @@ class DefaultFirebaseOptions {
     appId: '1:305167993236:ios:a98f7ba08c222434ade781',
     messagingSenderId: '305167993236',
     projectId: 'flutterapp-3b2dd',
+    databaseURL: 'https://flutterapp-3b2dd-default-rtdb.firebaseio.com',
     storageBucket: 'flutterapp-3b2dd.appspot.com',
     iosClientId: '305167993236-534esd9d0u2vpm5ethuqto2lc0jndai6.apps.googleusercontent.com',
     iosBundleId: 'com.example.flutterApplication2',
@@ -76,6 +79,7 @@ class DefaultFirebaseOptions {
     appId: '1:305167993236:ios:a98f7ba08c222434ade781',
     messagingSenderId: '305167993236',
     projectId: 'flutterapp-3b2dd',
+    databaseURL: 'https://flutterapp-3b2dd-default-rtdb.firebaseio.com',
     storageBucket: 'flutterapp-3b2dd.appspot.com',
     iosClientId: '305167993236-534esd9d0u2vpm5ethuqto2lc0jndai6.apps.googleusercontent.com',
     iosBundleId: 'com.example.flutterApplication2',
