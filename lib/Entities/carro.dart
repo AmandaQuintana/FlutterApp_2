@@ -1,14 +1,14 @@
 class Carro {
-  final String? color;
+  final String? Color;
   final String? marca;
   final int? modelo;
   final String? placa;
 
-  Carro({this.color, this.marca, this.modelo, this.placa});
+  Carro({this.Color, this.marca, this.modelo, this.placa});
 
-  factory Carro.fromJason(Map<String, dynamic> json) {
+  factory Carro.fromJson(Map<String, dynamic> json) {
     return Carro(
-        color: json['Color'],
+        Color: json['Color'],
         marca: json['marca'],
         modelo: json['modelo'],
         placa: json['placa']);

@@ -22,9 +22,12 @@ class Registros {
 
   factory Registros.fromJson(Map<String, dynamic> json) {
     return Registros(
-        carro: json['Carro'] != null ? Carro.fromJason(json['Carro']) : null,
+        carro: json['Carro'] != null
+            ? Carro.fromJson(Map<String, dynamic>.from(json['Carro'] as Map))
+            : null,
         servicio: json['Servicio'] != null
-            ? Servicio.fromJson(json['Servicio'])
+            ? Servicio.fromJson(
+                Map<String, dynamic>.from(json['Servicio'] as Map))
             : null,
         apellido: json['apellido'],
         cel: json['cel'],

@@ -26,8 +26,9 @@ class FirebaseConnetion {
     try {
       DatabaseReference _registros = instanceFirebase();
       DataSnapshot response = await _registros.get();
-      final registers = ResponseFirebase.fromJson(response.value as List);
+      final lista = response.value as List;
       print(response.value);
+      final registers = ResponseFirebase.fromJson(lista);
       return registers;
     } catch (e) {
       rethrow;

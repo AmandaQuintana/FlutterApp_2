@@ -58,37 +58,12 @@ class ListView1 extends StatelessWidget {
   Widget build(BuildContext context) {
     callDatabase();
     return Scaffold(
-        appBar: AppBar(
-          title: const Text('Video Juegos'),
-        ),
         body: ListView.builder(
             itemCount: _games.length,
-            physics: const BouncingScrollPhysics(),
+            physics: const BouncingScrollPhysics(
+                parent: AlwaysScrollableScrollPhysics()),
             itemBuilder: (context, index) {
-              return ListTile(
-                leading: CircleAvatar(
-                  backgroundImage: Image.network(_games[index]["image"]!).image,
-                ),
-                title: Text(_games[index]["name"]!),
-                onTap: () => {
-                  showDialog(
-                      context: context,
-                      builder: (BuildContext context) => AlertDialog(
-                            title: Text(_games[index]["name"]!),
-                            content: Image(
-                              image:
-                                  Image.network(_games[index]["image"]!).image,
-                            ),
-                            actions: <Widget>[
-                              TextButton(
-                                onPressed: () =>
-                                    Navigator.pop(context, 'Go Back'),
-                                child: const Text('Go Back'),
-                              )
-                            ],
-                          ))
-                },
-              );
+              return CardCustom();
             }));
   }
 
@@ -99,15 +74,28 @@ class ListView1 extends StatelessWidget {
   }
 
   void callDatabase() async {
-    /*DatabaseReference starCountRef =
-        FirebaseDatabase.instance.ref('/Registros');
-    starCountRef.onValue.listen((event) {
-      final data = event.snapshot.value;
-      print(data.toString());
-    });*/
-
     DatabaseReference _registros = instanceFirebase();
     DataSnapshot response = await _registros.get();
     print(response.value);
+  }
+}
+
+class CardCustom extends StatelessWidget {
+  const CardCustom({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return const Center(
+      child: Card(
+        elevation: 2,
+        child: SizedBox(
+          width: 370,
+          height: 120,
+          child: Center(
+            child: Text('Clean Card'),
+          ),
+        ),
+      ),
+    );
   }
 }
